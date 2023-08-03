@@ -141,7 +141,17 @@
     {/block}
 
     {block name='statsbestproducts'}
-      {hook h='displayAdminStatsModules' params=$params}
+    {*   {hook h='displayAdminStatsModules' params=$params} *}
+    <section class="best-products mt-3">
+          <p class="products-section-title">{l s='Lo más vendido' d='Shop.Theme.Catalog'}</p>
+          <div class="products">
+            {foreach from=$accessories item="product_accessory"}
+              {block name='product_miniature'}
+                {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory}
+              {/block}
+            {/foreach}
+          </div>
+        </section>
     {/block}
 
     {block name='product_footer'}
