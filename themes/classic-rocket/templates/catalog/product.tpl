@@ -154,6 +154,15 @@
         </section>
     {/block}
 
+    {block name='product_details'}
+      <div>
+        <h3>Sobre el producto</h3>
+        <section>
+        <p>El diseño de la nueva <strong>Draco V2</strong> parte de su estilo inconfundible para llevar a un nuevo nivel de excelencia todas sus prestaciones. Manteniendo su característico frontal y su chasis midtower full view con cristal templado <strong>Draco V2 </strong>no te dejará indiferente.</p>
+        </section>
+      </div>
+    {/block}
+
     {block name='product_footer'}
       {hook h='displayFooterProduct' product=$product category=$category}
     {/block}
