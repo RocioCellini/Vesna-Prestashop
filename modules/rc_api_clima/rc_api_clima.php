@@ -261,7 +261,6 @@ class Rc_api_clima extends Module
         $this->context->controller->addJS($this->_path.'/views/js/front.js');
         $this->context->controller->addCSS($this->_path.'/views/css/front.css');
         return $this->display(__FILE__,'hookDisplayNav2.tpl');
-        return $this->display(__FILE__,'/views/templates/admin/configure.tpl');
 
        
     }
