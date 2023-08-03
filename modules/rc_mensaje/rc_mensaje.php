@@ -66,7 +66,9 @@ class Rc_mensaje extends Module
         return parent::install() &&
             $this->registerHook('header') &&
             $this->registerHook('backOfficeHeader') &&
-            $this->registerHook('displayFooterProduct ');
+            $this->registerHook('displayBackOfficeHeader') &&
+            $this->registerHook('displayFooterProduct') &&
+            $this->registerHook('displayBanner');
     }
 
     public function uninstall()
@@ -231,8 +233,20 @@ class Rc_mensaje extends Module
         $this->context->controller->addCSS($this->_path.'/views/css/front.css');
     }
 
+    public function hookDisplayBackOfficeHeader()
+    {
+        /* Place your code here. */
+    }
 
     public function displayFooterProduct()
+    {
+        $this->context->controller->addJS($this->_path.'/views/js/front.js');
+        $this->context->controller->addCSS($this->_path.'/views/css/front.css');
+
+        return $this->display(__FILE__,'hookDisplayFooterProduct.tpl');
+    }
+
+    public function hookDisplayBanner()
     {
         /* Place your code here. */
     }
