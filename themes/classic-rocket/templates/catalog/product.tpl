@@ -128,7 +128,7 @@
     {block name='product_accessories'}
       {if $accessories}
         <section class="product-accessories mt-3">
-          <p class="products-section-title">{l s='You might also like' d='Shop.Theme.Catalog'}</p>
+          <p class="products-section-title">{l s='Otros usuarios vieron' d='Shop.Theme.Catalog'}</p>
           <div class="products">
             {foreach from=$accessories item="product_accessory"}
               {block name='product_miniature'}
@@ -138,6 +138,29 @@
           </div>
         </section>
       {/if}
+    {/block}
+
+    {block name='statsbestproducts'}
+    {*   {hook h='displayAdminStatsModules' params=$params} *}
+    <section class="best-products mt-3">
+          <p class="products-section-title">{l s='Lo más vendido' d='Shop.Theme.Catalog'}</p>
+          <div class="products">
+            {foreach from=$accessories item="product_accessory"}
+              {block name='product_miniature'}
+                {include file='catalog/_partials/miniatures/product.tpl' product=$product_accessory}
+              {/block}
+            {/foreach}
+          </div>
+        </section>
+    {/block}
+
+    {block name='product_details'}
+      <div>
+        <h3>Sobre el producto</h3>
+        <section>
+        <p>El diseño de la nueva <strong>Draco V2</strong> parte de su estilo inconfundible para llevar a un nuevo nivel de excelencia todas sus prestaciones. Manteniendo su característico frontal y su chasis midtower full view con cristal templado <strong>Draco V2 </strong>no te dejará indiferente.</p>
+        </section>
+      </div>
     {/block}
 
     {block name='product_footer'}
