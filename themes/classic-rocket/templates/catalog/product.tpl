@@ -128,7 +128,7 @@
     {block name='product_accessories'}
       {if $accessories}
         <section class="product-accessories mt-3">
-          <p class="products-section-title">{l s='You might also like' d='Shop.Theme.Catalog'}</p>
+          <p class="products-section-title">{l s='Otros usuarios vieron' d='Shop.Theme.Catalog'}</p>
           <div class="products">
             {foreach from=$accessories item="product_accessory"}
               {block name='product_miniature'}
@@ -138,6 +138,10 @@
           </div>
         </section>
       {/if}
+    {/block}
+
+    {block name='statsbestproducts'}
+      {hook h='displayAdminStatsModules' params=$params}
     {/block}
 
     {block name='product_footer'}
