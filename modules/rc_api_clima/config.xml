@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>rc_api_clima</name>
+	<displayName><![CDATA[Datos Climatológicos]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[Aquí podrás visualizar los datos del tiempo según tu ubicación.]]></description>
+	<author><![CDATA[rocio cellini]]></author>
+	<tab><![CDATA[i18n_localization]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+</module>

@@ -1,0 +1,1 @@
+<?php echo $data->main->temp_min; ?> 
